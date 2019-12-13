@@ -10,10 +10,8 @@ module.exports = class Maze {
         this.map = map;
     }
 
-
-    printPosition(position) {
+    recordPosition(position) {
         this.map[position.y][position.x] = "🤖";
-        console.log(this.map);
     }
 
     pad() {
@@ -36,8 +34,6 @@ module.exports = class Maze {
         output.push(this.map[position.y][position.x + 1]);
         output.push(this.map[position.y + 1][position.x]);
         output.push(this.map[position.y][position.x - 1]);
-        console.log("cells", output);
-
         return output;
     }
 
